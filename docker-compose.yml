@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database per System Boundary
+  postgres_pms:
+    image: postgres:16-alpine
+    container_name: platform_postgres_pms
+    environment:
+      POSTGRES_DB: pms_db
+      POSTGRES_USER: pms_user
+      POSTGRES_PASSWORD: pms_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pms_postgres_data:/var/lib/postgresql/data
+
+  # Backend Laravel API (001_pms)
+  pms_backend:
+    build:
+      context: ./be
+      dockerfile: Dockerfile
+    container_name: platform_pms_backend
+    environment:
+      APP_ENV: production
+      DB_CONNECTION: pgsql
+      DB_HOST: postgres_pms
+      DB_PORT: 5432
+      DB_DATABASE: pms_db
+      DB_USERNAME: pms_user
+      DB_PASSWORD: pms_password
+    depends_on:
+      - postgres_pms
+
+  # Frontend Nuxt 4 Web & System Launcher
+  portfolio_frontend:
+    build:
+      context: ./fe
+      dockerfile: Dockerfile
+    container_name: platform_portfolio_frontend
+    environment:
+      USE_DUMMY_DATA: "true"
+      NUXT_PUBLIC_API_BASE_URL: "http://localhost:8000"
+    ports:
+      - "3000:3000"
+
+volumes:
+  pms_postgres_data:

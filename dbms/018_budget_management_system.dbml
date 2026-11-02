@@ -1,0 +1,92 @@
+﻿Project system_018_bms {
+  database_type: 'PostgreSQL'
+  Note: 'Production baseline template for Budget Management System. This schema owns all local data and integrates with SSO only through external_auth_id.'
+}
+
+Enum bms_user_status { active suspended archived }
+Enum bms_record_status { draft active completed cancelled archived }
+Enum bms_transaction_status { pending approved rejected completed cancelled }
+Enum bms_log_type { created updated deleted status_changed }
+Table bms_users {
+  id uuid [pk]
+  external_auth_id varchar(255) [null, unique, note: 'Application-level SSO reference; no cross-database FK.']
+  name varchar(160) [not null]
+  email varchar(255) [not null, unique]
+  role varchar(80) [not null, default: 'operator']
+  status bms_user_status [not null, default: 'active']
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  deleted_at timestamp [null]
+  Indexes { external_auth_id email status (status, created_at) }
+}
+
+Table bms_categories {
+  id uuid [pk]
+  name varchar(160) [not null]
+  slug varchar(180) [not null, unique]
+  description text [null]
+  status bms_record_status [not null, default: 'active']
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  deleted_at timestamp [null]
+  Indexes { slug status (status, created_at) }
+}
+
+Table bms_budgets {
+  id uuid [pk]
+  category_id uuid [null, ref: > bms_categories.id]
+  owner_id uuid [null, ref: > bms_users.id]
+  code varchar(80) [not null, unique]
+  name varchar(200) [not null]
+  description text [null]
+  status bms_record_status [not null, default: 'draft']
+  metadata json [null]
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  deleted_at timestamp [null]
+  Indexes { category_id owner_id code status (status, created_at) }
+}
+
+Table bms_budget_lines {
+  id uuid [pk]
+  master_id uuid [null, ref: > bms_budgets.id]
+  actor_id uuid [null, ref: > bms_users.id]
+  reference_no varchar(80) [not null, unique]
+  status bms_transaction_status [not null, default: 'pending']
+  title_snapshot varchar(200) [null, note: 'Immutable business label captured at transaction time.']
+  amount decimal(14,2) [null]
+  currency char(3) [not null, default: 'IDR']
+  occurred_at timestamp [not null]
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  deleted_at timestamp [null]
+  Indexes { master_id actor_id reference_no status (status, occurred_at) (actor_id, occurred_at) }
+}
+
+Table bms_allocations {
+  id uuid [pk]
+  transaction_id uuid [not null, ref: > bms_budget_lines.id]
+  master_id uuid [null, ref: > bms_budgets.id]
+  name_snapshot varchar(200) [not null, note: 'Immutable name snapshot; master data may change later.']
+  code_snapshot varchar(80) [null]
+  quantity decimal(14,3) [not null, default: 1]
+  unit_price decimal(14,2) [null]
+  line_total decimal(14,2) [null]
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  Indexes { transaction_id master_id (transaction_id, master_id) }
+}
+
+Table bms_audit_logs {
+  id uuid [pk]
+  user_id uuid [null, ref: > bms_users.id]
+  entity_type varchar(120) [not null]
+  entity_id uuid [not null]
+  event bms_log_type [not null]
+  before_data json [null]
+  after_data json [null]
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  Indexes { user_id (entity_type, entity_id) (event, created_at) }
+}
+

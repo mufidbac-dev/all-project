@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }}\Exports;
+
+class {{ modelName }}Export
+{
+    public function headings(): array
+    {
+        return [
+            {{ exportHeadings }}
+        ];
+    }
+
+    public function map($row): array
+    {
+        return [
+            {{ exportMappings }}
+        ];
+    }
+}
+

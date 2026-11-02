@@ -1,0 +1,46 @@
+name: Monorepo Platform CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-frontend:
+    name: Test & Build Nuxt Frontend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: fe/package-lock.json
+
+      - name: Install Frontend Dependencies
+        run: cd fe && npm ci
+
+      - name: Production Build Nuxt 4
+        run: cd fe && npm run build
+
+  test-backend:
+    name: Test Laravel Backend API
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: pdo, pdo_sqlite, mbstring, ctype, xml, json
+          coverage: none
+
+      - name: Install Composer Dependencies
+        run: cd be && composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Run Backend Tests
+        run: cd be && php artisan test

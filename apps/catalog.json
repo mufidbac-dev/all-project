@@ -1,0 +1,602 @@
+[
+  {
+    "id": "001",
+    "code": "PMS",
+    "name": "Pms",
+    "status": "DEVELOPMENT",
+    "dbml_path": "dbms/001_pms.dbml",
+    "frontend": "apps/001_pms/frontend",
+    "backend": "apps/001_pms/backend",
+    "live_url": "https://pms.domain.com"
+  },
+  {
+    "id": "002",
+    "code": "POS",
+    "name": "Point Of Sales System",
+    "status": "DEVELOPMENT",
+    "dbml_path": "dbms/002_point_of_sales_system.dbml",
+    "frontend": "apps/002_pos/fe",
+    "backend": "apps/002_pos/be",
+    "live_url": null
+  },
+  {
+    "id": "003",
+    "code": "LMS",
+    "name": "Learning Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/003_learning_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "004",
+    "code": "HRIS",
+    "name": "Human Resource Information System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/004_human_resource_information_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "005",
+    "code": "ES",
+    "name": "Examination System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/005_examination_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "006",
+    "code": "EMS",
+    "name": "Event Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/006_event_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "007",
+    "code": "WMS",
+    "name": "Wedding Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/007_wedding_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "008",
+    "code": "IMS",
+    "name": "Inventory Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/008_inventory_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "009",
+    "code": "OMS",
+    "name": "Order Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/009_order_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "010",
+    "code": "WMS",
+    "name": "Warehouse Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/010_warehouse_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "011",
+    "code": "TMS",
+    "name": "Transportation Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/011_transportation_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "012",
+    "code": "CDMS",
+    "name": "Courier Delivery Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/012_courier_delivery_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "013",
+    "code": "STS",
+    "name": "Shipment Tracking System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/013_shipment_tracking_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "014",
+    "code": "ECS",
+    "name": "E Commerce System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/014_e_commerce_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "015",
+    "code": "AMS",
+    "name": "Accounting Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/015_accounting_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "016",
+    "code": "PMS",
+    "name": "Payment Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/016_payment_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "017",
+    "code": "PMS",
+    "name": "Procurement Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/017_procurement_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "018",
+    "code": "BMS",
+    "name": "Budget Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/018_budget_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "019",
+    "code": "WMS",
+    "name": "Workflow Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/019_workflow_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "020",
+    "code": "AMS",
+    "name": "Approval Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/020_approval_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "021",
+    "code": "DMS",
+    "name": "Document Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/021_document_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "022",
+    "code": "CRMS",
+    "name": "Customer Relationship Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/022_customer_relationship_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "023",
+    "code": "AMS",
+    "name": "Asset Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/023_asset_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "024",
+    "code": "CMS",
+    "name": "Contract Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/024_contract_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "025",
+    "code": "TMS",
+    "name": "Travel Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/025_travel_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "026",
+    "code": "EMS",
+    "name": "Expense Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/026_expense_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "027",
+    "code": "RMS",
+    "name": "Reimbursement Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/027_reimbursement_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "028",
+    "code": "PMS",
+    "name": "Payroll Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/028_payroll_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "029",
+    "code": "TMS",
+    "name": "Tax Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/029_tax_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "030",
+    "code": "HMS",
+    "name": "Hotel Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/030_hotel_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "031",
+    "code": "RMS",
+    "name": "Restaurant Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/031_restaurant_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "032",
+    "code": "BMS",
+    "name": "Booking Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/032_booking_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "033",
+    "code": "TS",
+    "name": "Ticketing System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/033_ticketing_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "034",
+    "code": "SMS",
+    "name": "Subscription Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/034_subscription_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "035",
+    "code": "CMS",
+    "name": "Content Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/035_content_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "036",
+    "code": "VSS",
+    "name": "Video Streaming System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/036_video_streaming_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "037",
+    "code": "MSS",
+    "name": "Music Streaming System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/037_music_streaming_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "038",
+    "code": "LSS",
+    "name": "Live Streaming System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/038_live_streaming_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "039",
+    "code": "SMS",
+    "name": "School Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/039_school_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "040",
+    "code": "SIS",
+    "name": "Student Information System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/040_student_information_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "041",
+    "code": "LMS",
+    "name": "Library Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/041_library_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "042",
+    "code": "CMS",
+    "name": "Certification Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/042_certification_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "043",
+    "code": "HMS",
+    "name": "Hospital Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/043_hospital_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "044",
+    "code": "CMS",
+    "name": "Clinic Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/044_clinic_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "045",
+    "code": "PMS",
+    "name": "Pharmacy Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/045_pharmacy_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "046",
+    "code": "FMS",
+    "name": "Fleet Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/046_fleet_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "047",
+    "code": "FMS",
+    "name": "Fuel Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/047_fuel_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "048",
+    "code": "SPMS",
+    "name": "Spare Part Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/048_spare_part_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "049",
+    "code": "MMS",
+    "name": "Manufacturing Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/049_manufacturing_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "050",
+    "code": "SCMS",
+    "name": "Supply Chain Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/050_supply_chain_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "051",
+    "code": "REMS",
+    "name": "Real Estate Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/051_real_estate_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "052",
+    "code": "PRMS",
+    "name": "Property Rental Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/052_property_rental_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "053",
+    "code": "CMS",
+    "name": "Construction Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/053_construction_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "054",
+    "code": "FMS",
+    "name": "Facility Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/054_facility_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "055",
+    "code": "PMS",
+    "name": "Parking Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/055_parking_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "056",
+    "code": "WMS",
+    "name": "Waste Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/056_waste_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "057",
+    "code": "EMS",
+    "name": "Energy Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/057_energy_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "058",
+    "code": "AMS",
+    "name": "Agriculture Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/058_agriculture_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "059",
+    "code": "AMS",
+    "name": "Aquaculture Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/059_aquaculture_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  },
+  {
+    "id": "060",
+    "code": "TMS",
+    "name": "Telecommunication Management System",
+    "status": "PLANNED",
+    "dbml_path": "dbms/060_telecommunication_management_system.dbml",
+    "frontend": null,
+    "backend": null,
+    "live_url": null
+  }
+]

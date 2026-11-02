@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Platform Identity Token Contract",
+  "type": "object",
+  "properties": {
+    "sub": {
+      "type": "string",
+      "description": "Unique User UUID"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "name": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "aud": {
+      "type": "string",
+      "description": "Target System ID (e.g., 001_pms, 002_pos)"
+    },
+    "exp": {
+      "type": "integer"
+    }
+  },
+  "required": ["sub", "email", "roles", "aud", "exp"]
+}
